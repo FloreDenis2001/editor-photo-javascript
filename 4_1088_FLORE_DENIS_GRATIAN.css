@@ -1,0 +1,98 @@
+.container__editor {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "left top top top right"
+    "left center center center right"
+    "left center center center right";
+}
+
+.container__editor__left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  grid-area: left;
+}
+
+.container__editor__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  grid-area: right;
+}
+
+.container__editor__uploadImage{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+
+}
+
+#container__editor__dropTarget{
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.container__editor__center {
+  overflow:hidden;
+  max-width: 100rem;
+  max-height: 50rem;
+  display: grid;
+  place-content: center;
+  grid-area: center;
+}
+
+.container__editor__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  grid-area: top;
+}
+
+button {
+  box-shadow: inset 0px 1px 0px 0px #97c4fe;
+  background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+  background-color: #3d94f6;
+  border-radius: 6px;
+  border: 1px solid #337fed;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #1570cd;
+  width: 10rem;
+  height: 3rem;
+}
+button:hover {
+  background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  background-color: #1e62d0;
+}
+button:active {
+  position: relative;
+  top: 1px;
+}

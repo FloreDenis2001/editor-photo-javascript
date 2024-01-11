@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Foto - Flore Denis</title>
+   <link rel="stylesheet" href="./4_1088_FLORE_DENIS_GRATIAN.css">
+</head>
+
+<body>
+
+    <section class="container__editor">
+        <div class="container__editor__left">
+            <button onclick="aplicaFiltruUtilizator('contrast')">Contrast</button>
+            <button onclick="aplicaFiltruUtilizator('hue-rotate')">Hue Rotate</button>
+            <button onclick="aplicaFiltruUtilizator('invert')">Invert</button>
+            <button onclick="aplicaFiltruUtilizator('saturate')">Saturation</button>
+            <button onclick="aplicaFiltruUtilizator('brightness')">Brightness</button>
+        </div>
+
+        <div class="container__editor__top">
+            <button onclick="cropImage()">Crop</button>
+            <button onclick="scaleImage()">Scalare</button>
+            <button onclick="adaugareText()">Adauga Text</button>
+            <button onclick="stergerePixeliDinSelectie()">Sterge selectia</button>
+            <button onclick="displayHistogram()">Afiseaza Histograma</button>
+        </div>
+
+
+        <div class="container__editor__center">
+            <div class="container__editor__canvas" ondblclick="deselectare()">
+                <canvas id="canvas" onmousedown="startSelection(event)" onmouseup="endSelection(event)"
+                    onmousemove="updateSelection(event)" max-width="500" max-height="300"></canvas>
+            </div>
+        </div>
+
+
+
+        <div class="container__editor__right">
+            <button onclick="salveazaImaginea()">Salvare Imagine</button>
+            <div class="container__editor__uploadImage">
+                <input type="file" id="imageUpload" class="custom-file-input" accept=".png,.jpg,.jpeg" />
+                <div id="container__editor__dropTarget" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+                    <p>Drag and drop file</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="./4_1088_FLORE_DENIS_GRATIAN.js"></script>
+
+</body>
+
+</html>
